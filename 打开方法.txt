@@ -1,0 +1,17 @@
+Sonic Shine · A × B 融合版 / 中英双语
+
+请先完整解压，再双击 index.html；默认打开英文首页。中文入口为 zh/index.html。
+
+设计方向：A 的封面、蓝白工程风、导航与页面框架，结合 B 的工件案例、清洗工艺、四类设备与四个行业内容。
+共 24 个英文页面和对应的 24 个中文页面。页面包括首页、设备目录和四个详情页、四族对比、行业目录和四个详情页、案例检索和四个详情页、关于我们、新闻列表和三篇文章、资源与联系页。
+
+已保留：
+1. 首屏三张轮播，正常浏览时每 6 秒自动切换；可手动选择、前后切换、暂停和继续。指针移入或键盘聚焦时暂停；系统启用减少动态效果时默认暂停。
+2. 顶部联系方式、搜索、语言选择；导航含展开式菜单。
+3. English 与简体中文可真实互切，位置与 URL 中的筛选条件同步。其他七个语种入口保留并标注暂未开放。
+4. 案例按工件及污染物筛选；案例详情可切换工艺步骤；设备对比可选择 2–4 个设备族；新闻可筛选分类。
+5. 三份中英文设计版 PDF 可本地打开。询盘工具准备本地草稿，尚未接入实际销售收件渠道。
+
+图片、配置图和案例用于设计示意；设备参数与实测结果需由项目资料确认。
+
+English: Extract the complete folder and open index.html. The A × B direction includes 24 English pages and 24 corresponding Simplified Chinese pages. Only English and Simplified Chinese are live editions. The homepage has a three-slide carousel; cases, process tabs, the four-family comparison, search and article filters work locally. Contact forms prepare local drafts. Imagery and cases are illustrative.

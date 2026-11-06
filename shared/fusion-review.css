@@ -1,0 +1,11 @@
+.fusion-review{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;padding:30px;border:1px solid #c7d7ec;background:#f5f8fe;border-top:4px solid #164de2;margin:8px 0 32px;color:#152a40}
+.fusion-eyebrow{font:700 11px/1.5 ui-monospace,monospace;letter-spacing:.08em;color:#174bbb}
+.fusion-review h2{font:650 clamp(24px,3.3vw,39px)/1.18 Arial,"PingFang SC","Microsoft YaHei",sans-serif;letter-spacing:-.04em;color:#152a40;margin:12px 0 15px}
+.fusion-review p{font:400 15px/1.65 Arial,"PingFang SC","Microsoft YaHei",sans-serif;color:#4b6078;margin:0 0 22px;max-width:58ch}
+.fusion-review-actions{display:flex;align-items:center;gap:16px 23px;flex-wrap:wrap;font-size:13px;font-weight:650}
+.fusion-review-actions .fusion-primary{display:inline-block;background:#164de2;color:#fff;border:1px solid #164de2;text-decoration:none;padding:12px 17px}
+.fusion-review a:focus-visible{outline:3px solid #164de2;outline-offset:3px}
+.fusion-originals{display:flex;gap:13px;align-items:center;font-size:12px;color:#53687f;margin-top:18px}
+.fusion-preview{display:block;overflow:hidden;border:1px solid #d1daea;background:white;aspect-ratio:1.65}
+.fusion-preview img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+@media(max-width:760px){.fusion-review{grid-template-columns:1fr;padding:22px;gap:23px}.fusion-review h2{font-size:28px}.fusion-review p{font-size:14px}.fusion-review-actions{gap:12px}.fusion-preview{max-height:270px}}
