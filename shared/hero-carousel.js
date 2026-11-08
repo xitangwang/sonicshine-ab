@@ -17,7 +17,7 @@
     let current = Math.min(slides.length - 1, Math.max(0, (Number.parseInt(new URL(location.href).searchParams.get('slide'), 10) || 1) - 1));
     let userPaused = reduced.matches, pointerInside = false, focusInside = false, inView = true;
     let timer = 0, started = 0, remaining = duration, frame = 0, touch = null, swipedAt = 0;
-    function permitted() { return !userPaused && !pointerInside && !focusInside && !document.hidden && inView; }
+    function permitted() { return !userPaused && !focusInside && !document.hidden && inView && !document.querySelector('dialog[open]'); }
     function stopTimer(reset = false) {
       if (timer) { clearTimeout(timer); timer = 0; remaining = Math.max(0, remaining - (performance.now() - started)); }
       cancelAnimationFrame(frame);
@@ -64,14 +64,13 @@
     pause.addEventListener('click', () => {
       userPaused = !userPaused;
       if (!userPaused) { remaining = duration; focusInside = false; }
-      live.textContent = userPaused ? (zh ? '自动轮播已暂停。' : 'Automatic slideshow paused.') : (zh ? '自动轮播已开启。鼠标移出后播放。' : 'Automatic slideshow enabled. Move the pointer away to play.');
+      live.textContent = userPaused ? (zh ? '自动轮播已暂停。' : 'Automatic slideshow paused.') : (zh ? '自动轮播已开启。' : 'Automatic slideshow enabled.');
       sync();
     });
     controls.addEventListener('keydown', e => {
       if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); go(current + (e.key === 'ArrowLeft' ? -1 : 1)); }
     });
-    root.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') { pointerInside = true; sync(); } });
-    root.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse') { pointerInside = false; sync(); } });
+    root.addEventListener('pointerdown', () => { if (focusInside) { focusInside = false; sync(); } });
     root.addEventListener('focusin', e => { if (!e.target.matches(':focus-visible')) return; focusInside = true; sync(); });
     root.addEventListener('focusout', e => { if (!root.contains(e.relatedTarget)) { focusInside = false; sync(); } });
     const track = root.querySelector('.ss-hero-track');
@@ -84,6 +83,7 @@
     });
     track.addEventListener('click', e => { if (swipedAt && performance.now() - swipedAt < 600) { e.preventDefault(); e.stopPropagation(); } }, true);
     document.addEventListener('visibilitychange', sync);
+    new MutationObserver(sync).observe(document.body, {subtree:true, attributes:true, attributeFilter:['open']});
     if ('IntersectionObserver' in window) new IntersectionObserver(entries => {
       inView = entries[0].isIntersecting && entries[0].intersectionRatio > .15; sync();
     }, {threshold:[0,.15,.3]}).observe(root);
