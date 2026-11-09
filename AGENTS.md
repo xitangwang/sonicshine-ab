@@ -9,6 +9,8 @@
 
 - 2026-11-09 heading clarification: enlarge the actual section labels such as “01 / 设备分类”; remove the separate slogan headings such as “先看工艺，再选设备”. Apply consistently to bilingual section headers. Keep paragraph, card, article-body, navigation and Hero font sizes unchanged. Labels are semantic h2 elements with class `section-heading`.
 
+- 2026-11-09 homepage module 5: use “05 / 资讯与知识” (“05 / News & Knowledge”) and three article cards drawn from the existing newsroom. Each card has its distinct image, category, date, title, short excerpt and working article link; keep the existing card styling and 38px section label. No extra slogan heading. PDF downloads remain in the dedicated resource library.
+
 ## Earlier visual and implementation decisions
 
 # Prototype Instructions
