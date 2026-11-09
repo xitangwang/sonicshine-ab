@@ -7,6 +7,8 @@
 - Keep catalogue values explicitly sourced and distinguish illustrative workpiece studies from verified projects. Do not add invented specifications, certificates, achievements or customer results.
 - Contact forms compose email or WhatsApp messages; the visitor completes sending. Never show a received/sent state without a real receiving service. No fake newsletter subscription.
 
+- 2026-11-09 heading clarification: enlarge the actual section labels such as “01 / 设备分类”; remove the separate slogan headings such as “先看工艺，再选设备”. Apply consistently to bilingual section headers. Keep paragraph, card, article-body, navigation and Hero font sizes unchanged. Labels are semantic h2 elements with class `section-heading`.
+
 ## Earlier visual and implementation decisions
 
 # Prototype Instructions
