@@ -1,6 +1,7 @@
 # SonicShine content renovation — 2026-11-09
 
 - Source: user-confirmed `https://wenming.space/sonicshine-ab/ab/index.html`, existing A×B fusion design. Preserve its silver-white / blue engineering identity and seven primary navigation items.
+- 2026-11-09 clarification: retain the complete pre-renovation visual design (baseline ea279ea), especially the exact Hero composition, images, typography, sizing and controls. New requirements change content structure only. Use the original header, dark footer, language-specific stylesheets and existing components for new material. Content styles must never affect the Hero. Keep the already requested autoplay-on-hover and pinned navigation behavior.
 - Use the approved structure in `官网完善内容清单_结构定稿.md`: Home, Products, Applications (12 industries + customization), Custom Cases, About Us, News / Blog (five categories + downloads), Contact Us.
 - Preserve desktop-first design, a pinned header, right contact rail, and automatic carousel playback during pointer hover.
 - Prefer the supplied ultrasonic knowledge base; use competitor sites for structure and general guidance. Do not copy their business claims, numbers, customer results, certifications or contact data.
